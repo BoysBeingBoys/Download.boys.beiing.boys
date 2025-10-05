@@ -230,7 +230,7 @@ def main():
     
     # Read reel links from the .txt file
     with open(links_file, 'r', encoding='utf-8') as file:
-        reel_links = [line.strip() for line in file.readlines()]
+        reel_links = [line.strip() for line in file.readlines()][::-1]
         for reel_link in reel_links:
             print(f"Downloading reel: {reel_link}")
             counter = get_counter_value(counter_file)
